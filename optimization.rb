@@ -9,8 +9,7 @@ class Optimization < Formula
   depends_on 'protobuf'
 
   def install
-    system "./autogen.sh"
-    system "./configure", "--prefix=#{prefix}"
+    system "./autogen.sh", "--prefix=#{prefix}"
     system "make install" # if this fails, try separate make/make install steps
   end
 end
